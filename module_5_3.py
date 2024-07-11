@@ -27,17 +27,16 @@ class House:
         return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
-        if isinstance(value, int):
-            self.number_of_floors += value
-            return self
+        self.number_of_floors += value
+        return self
 
     def __radd__(self, value):
-            self.number_of_floors += value
-            return self
+        self.number_of_floors += value
+        return self
 
     def __iadd__(self, value):
-            self.number_of_floors += value
-            return self
+        self.number_of_floors += value
+                            return self
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
